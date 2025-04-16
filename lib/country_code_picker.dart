@@ -1,8 +1,6 @@
 library countrycodepicker;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_sim_country_code/flutter_sim_country_code.dart';
-//import 'package:flutter_sim_country_code/flutter_sim_country_code.dart';
 
 import 'country.dart';
 import 'functions.dart';

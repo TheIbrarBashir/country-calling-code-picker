@@ -2,9 +2,6 @@ import 'dart:convert';
 
 import 'package:country_calling_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_sim_country_code/flutter_sim_country_code.dart';
-
 import './country.dart';
 
 ///This function returns list of countries

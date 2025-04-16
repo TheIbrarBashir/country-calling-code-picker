@@ -22,7 +22,8 @@ Future<List<Country>> getCountries(BuildContext context) async {
 Future<Country> getDefaultCountry(BuildContext context) async {
   final list = await getCountries(context);
   try {
-    final countryCode = await FlutterSimCountryCode.simCountryCode;
+    final countryCode = "+962";
+    //await FlutterSimCountryCode.simCountryCode;
     if (countryCode == null) {
       return list.first;
     }

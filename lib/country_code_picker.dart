@@ -1,7 +1,7 @@
 library countrycodepicker;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_sim_country_code/flutter_sim_country_code.dart';
+//import 'package:flutter_sim_country_code/flutter_sim_country_code.dart';
 
 import 'country.dart';
 import 'functions.dart';
@@ -97,28 +97,28 @@ class _CountryPickerWidgetState extends State<CountryPickerWidget> {
     super.initState();
   }
 
-  void loadList() async {
-    setState(() {
-      _isLoading = true;
-    });
-    _list = await getCountries(context);
-    try {
-      String? code = await FlutterSimCountryCode.simCountryCode;
-      _currentCountry =
-          _list.firstWhere((element) => element.countryCode == code);
-      final country = _currentCountry;
-      if (country != null) {
-        _list.removeWhere(
-            (element) => element.callingCode == country.callingCode);
-        _list.insert(0, country);
-      }
-    } catch (e) {} finally {
-      setState(() {
-        _filteredList = _list.map((e) => e).toList();
-        _isLoading = false;
-      });
-    }
-  }
+  // void loadList() async {
+  //   setState(() {
+  //     _isLoading = true;
+  //   });
+  //   _list = await getCountries(context);
+  //   try {
+  //     String? code = await FlutterSimCountryCode.simCountryCode;
+  //     _currentCountry =
+  //         _list.firstWhere((element) => element.countryCode == code);
+  //     final country = _currentCountry;
+  //     if (country != null) {
+  //       _list.removeWhere(
+  //           (element) => element.callingCode == country.callingCode);
+  //       _list.insert(0, country);
+  //     }
+  //   } catch (e) {} finally {
+  //     setState(() {
+  //       _filteredList = _list.map((e) => e).toList();
+  //       _isLoading = false;
+  //     });
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
